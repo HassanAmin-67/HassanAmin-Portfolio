@@ -9,7 +9,7 @@ export default function Skills() {
         <SectionHeading
           label="03. Skills"
           title="Tech stack"
-          description="Technologies and tools I use to bring ideas to life."
+          description="What I build with, grouped by what I use it for."
         />
 
         <motion.div
@@ -17,7 +17,7 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid gap-6 md:grid-cols-3"
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {skills.map((group) => (
             <motion.div
@@ -27,6 +27,7 @@ export default function Skills() {
               className="rounded-2xl border border-border bg-surface-elevated p-6 transition-shadow hover:shadow-lg hover:shadow-accent/5"
             >
               <h3 className="mb-4 font-mono text-sm font-semibold text-accent">
+                <span className="text-text-muted">~/ </span>
                 {group.category}
               </h3>
               <ul className="flex flex-wrap gap-2">

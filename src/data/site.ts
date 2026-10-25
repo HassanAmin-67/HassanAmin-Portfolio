@@ -17,6 +17,8 @@ export const siteConfig = {
   status: 'Open to work',
   resume: '/resume.pdf', // put your PDF in the public/ folder with this name
   bio: 'CS graduate from FAST-NU Lahore with a strong foundation in OOP, data structures and algorithms, plus hands-on full-stack experience. Sole frontend engineer on a 5-person founding team at a US-based EdTech startup, shipping real features to real users in a fast-moving remote environment.',
+  about:
+  "I'm a CS graduate from FAST-NU Lahore who likes building things end to end: the React interface, the Express API and the database underneath. At Groqify I was the only frontend engineer on a five-person founding team, which taught me to ship fast, talk to real users and own what I build. Lately I've also been exploring AI-assisted development and automation, from Cursor in my workflow to an agent I built with n8n and Gemini. I'm looking for a full-stack or frontend role where I can keep learning and shipping.",
   social: {
     github: 'https://github.com/HassanAmin-67',
     linkedin: 'https://www.linkedin.com/in/hassan-amin-b09319246/',
@@ -36,6 +38,8 @@ export const experience = [
     company: 'Groqify Inc.',
     period: 'Aug 2026 — Sep 2026',
     location: 'Remote (United States)',
+    // Junior Software Developer, Groqify Inc.
+    tags: ['Full-stack testing', 'Bug triage'],
     highlights: [
       "Ran end-to-end testing across the platform's frontend and backend to find bugs and usability gaps.",
       'Worked across the full stack — frontend, backend and database — to investigate and resolve issues found in testing.',
@@ -47,6 +51,9 @@ export const experience = [
     company: 'Groqify Inc.',
     period: 'Jun 2025 — Aug 2025',
     location: 'Remote (United States)',
+    // Software Engineering Intern, Groqify Inc.
+    tags: ['Sole frontend engineer', '30+ user tests', '~30% faster delivery'],
+
     highlights: [
       'Sole frontend engineer in a 5-person founding team, working with the co-founders to architect and ship a corporate training platform from the ground up.',
       'Built responsive interfaces with React.js and Tailwind CSS, delivering interactive learning modules for multi-user training sessions.',
@@ -60,6 +67,8 @@ export const experience = [
     company: 'Edkasa',
     period: 'Jun 2024 — Jul 2024',
     location: 'Lahore, Pakistan',
+    // Product Engineering Intern, Edkasa
+    tags: ['EdTech research', 'LUMS partnership meeting'],
     highlights: [
       "Researched 5 emerging EdTech tools for platform integration; findings shaped the team's adoption decision and 1 tool was shortlisted for production.",
       'Independently prepared research and presentation materials for a partnership meeting at LUMS, attending alongside company CEOs as the sole intern.',

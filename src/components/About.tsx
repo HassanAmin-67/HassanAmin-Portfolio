@@ -3,13 +3,22 @@ import { Section, SectionHeading, staggerContainer, fadeInUp } from './ui/Sectio
 import { siteConfig, stats, certifications } from '../data/site'
 
 export default function About() {
+  const rows = [
+    ['name', siteConfig.name],
+    ['role', siteConfig.title],
+    ['education', siteConfig.education],
+    ['location', siteConfig.location],
+    ['focus', 'full-stack · AI-assisted development'],
+    ['status', siteConfig.status],
+  ]
+
   return (
     <Section id="about">
       <div className="mx-auto max-w-5xl px-4">
         <SectionHeading
           label="01. About"
-          title="Building things that matter"
-          description="A quick snapshot of who I am and what drives my work."
+          title="A bit about me"
+          description="Who I am, what I've been building, and what I'm looking for."
         />
 
         <div className="grid gap-12 lg:grid-cols-5">
@@ -20,51 +29,29 @@ export default function About() {
             viewport={{ once: true }}
             className="lg:col-span-3"
           >
-            <motion.div
-              variants={fadeInUp}
-              className="rounded-2xl border border-border bg-surface-elevated p-6 md:p-8"
-            >
-              <div className="mb-4 font-mono text-sm text-accent">
-                <span className="text-text-muted">const</span> about = {'{'}
-              </div>
-
-              <div className="space-y-3 pl-4 font-mono text-sm leading-relaxed text-text-muted md:text-base">
-                <p>
-                  <span className="text-accent">name</span>:{' '}
-                  <span className="text-emerald-500">&quot;{siteConfig.name}&quot;</span>,
-                </p>
-                <p>
-                  <span className="text-accent">role</span>:{' '}
-                  <span className="text-emerald-500">&quot;{siteConfig.title}&quot;</span>,
-                </p>
-                <p>
-                  <span className="text-accent">education</span>:{' '}
-                  <span className="text-emerald-500">&quot;{siteConfig.education}&quot;</span>,
-                </p>
-                <p>
-                  <span className="text-accent">location</span>:{' '}
-                  <span className="text-emerald-500">&quot;{siteConfig.location}&quot;</span>,
-                </p>
-                <p>
-                  <span className="text-accent">stack</span>:{' '}
-                  <span className="text-emerald-500">&quot;{siteConfig.tagline}&quot;</span>,
-                </p>
-              </div>
-
-              <div className="mt-4 font-mono text-sm text-accent">{'}'}</div>
-            </motion.div>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mt-6 text-lg leading-relaxed text-text-muted"
-            >
-              {siteConfig.bio} Comfortable moving fast, learning on the job, and owning work end to end.
+            <motion.p variants={fadeInUp} className="text-lg leading-relaxed text-text">
+              {siteConfig.about}
             </motion.p>
 
             <motion.div
               variants={fadeInUp}
-              className="mt-6 flex flex-wrap gap-3"
+              className="mt-8 rounded-2xl border border-border bg-surface-elevated p-6"
             >
+              <div className="mb-3 font-mono text-sm text-accent">
+                <span className="text-text-muted">const</span> hassan = {'{'}
+              </div>
+              <div className="space-y-1.5 pl-4 font-mono text-sm text-text-muted">
+                {rows.map(([k, v]) => (
+                  <p key={k}>
+                    <span className="text-accent">{k}</span>:{' '}
+                    <span className="text-emerald-500">&quot;{v}&quot;</span>,
+                  </p>
+                ))}
+              </div>
+              <div className="mt-3 font-mono text-sm text-accent">{'}'}</div>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="mt-6 flex flex-wrap gap-3">
               {certifications.map((cert) => (
                 <span
                   key={cert.name}
